@@ -1,17 +1,17 @@
 # ReduxJS
 
-Using redux to manage your large state of data. State can become more complex after 3-4 more state in one of the components. Sometime we also want to pass state to deep layer of component and now it become state drilling into each component on top of our target component. That is why using state management like redux help you solve those problems.
+We are using redux to manage your large state of data. The state can become more complex after 3-4 more states in one of the components. Sometimes we also want to pass state to the deep layer of components and now it becomes state drilling into each component on top of our target component. That is why using state management like redux helps you solve those problems.
 
-Redux support a lot of framework:
+Redux supports a lot of frameworks:
 - NextJS
 - VueJS
 - Angular
 
-Since I am familiar with React, I will show you on how to use redux in our projects.
+Since I am familiar with React, I will show you how to use redux in our projects.
 
 ## Installation
 
-Firstly first, we'll need [nodejs](https://nodejs.org/en) installed. After the installation of node is completed, you can create our react project.
+Firstly first, we'll need [nodejs](https://nodejs.org/en) installed. After the node installation is completed, you can create a react project.
 
 ```bash
 $ npm create vite@latest
@@ -27,7 +27,7 @@ $ npm install react-redux
 
 ### Redux Store
 
-After that, we can create redux folder. We create `index.ts` in the folder.
+After that, we can create the redux folder. We create `index.ts` in the folder.
 
 ```typescript
 import { configureStore } from "@reduxjs/toolkit";
@@ -47,9 +47,9 @@ export type AppDispatch = typeof store.dispatch;
 
 ### Redux Slice
 
-We can create new folder the in the `redux` folder. The folder name will depends on the data you want to store.
+We can create a new folder in the `redux` folder. The folder name will depend on the data you want to store.
 
-We will create customers data.
+We will create customer data.
 
 ```typescript
 // redux/counter/counterSlice.ts
@@ -90,11 +90,11 @@ export const { increment, decrement, reset, addByAmount, deduceByAmount } =
 export default counterSlice.reducer;
 ```
 
-After that add counter reducer to store reducer like the top.
+After that add a counter reducer to store the reducer like the top.
 
 ### Redux Provider
 
-Add redux provider at the root, so we can use the data through the app.
+Add a redux provider at the root so that we can use the data through the app.
 
 ```jsx
 import React from "react";
